@@ -12,8 +12,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-        title: 'Startup Name Generator', home: _RandomWords());
+    return MaterialApp(
+      title: 'Startup Name Generator',
+      home: const _RandomWords(),
+      theme: ThemeData(
+        // theme
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
+        ),
+      ),
+    );
   }
 }
 
@@ -60,7 +69,7 @@ class _RandomWordsState extends State<_RandomWords> {
             body: ListView(children: divided),
           );
         },
-      ), // ...to here.
+      ),
     );
   }
 
